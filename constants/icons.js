@@ -11,6 +11,10 @@ import logout from "../assets/icons/logout.png";
 import eyeHide from "../assets/icons/eye-hide.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
+import calendarday from "../assets/icons/calendar-day.png";
+import plussquare from "../assets/icons/square-plus.png";
+import applebook from "../assets/icons/apple-books.png"
+
 
 export default {
   play,
@@ -26,4 +30,7 @@ export default {
   logout,
   eyeHide,
   eye,
+  calendarday,
+  plussquare,
+  applebook,
 };

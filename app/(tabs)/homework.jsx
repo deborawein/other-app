@@ -4,7 +4,7 @@ import React from 'react'
 const Homework = () => {
   return (
     <View>
-      <Text>Homework</Text>
+      <Text>Homework Page</Text>
     </View>
   )
 }
