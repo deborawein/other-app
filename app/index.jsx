@@ -1,35 +1,62 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, Text, View } from 'react-native';
-import { Link } from 'expo-router';
+import { Redirect, router, Link } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { images } from '../constants';
-import CustomButton from '../components/customButton';
+import CustomButton from '../components/CustomButton';
 
 
 
 export default function App() {
   return (
     <SafeAreaView className="bg-primary h-full">
-      <ScrollView contentContainerStyle={{ height: '100%' }}>
-        <View className="w-full flex justify-center items-center h-full px-4">
+
+      <ScrollView
+        contentContainerStyle={{
+          height: "100%"
+        }}
+      >
+
+        <View className="w-full flex justify-center items-center min-h-[85vh] px-4">
+
           <Image
-            source={images.logo}
-            className="w-[196px] h-[250px]"
+            source={images.logoSmall}
+            className="w-[210px] h-[210px]"
             resizeMode="contain"
           />
+
           <View className="relative mt-5">
-            <Text className="text-3xl text-white font-bold text-center">
-              Stay closer to your child’s world...
+
+            <Text className="text-3xl text-white font-psemibold text-center">
+              Stay closer to your{'\n'}
+              child’s world with
+
+
+
             </Text>
+            <Text className="text-4xl text-secondary-200 font-pregular text-center mt-1">
+              KidShip
+            </Text>
+
           </View>
-          <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
-            Creating seamless communication between parents and childcare providers!
-          </Text>
-          <CustomButton />
+
+          {/* <Text className="text-sm font-pregular text-gray-100 mt-12 text-center">
+            Creating seamless communication between parents and childcare providers
+          </Text> */}
+
+          <CustomButton
+            title='Get started'
+            handlePress={() => { router.push('/sign-in') }}
+            containerStyles="w-full mt-20"
+          />
+
         </View>
+
       </ScrollView>
 
-    </SafeAreaView>
+      <StatusBar backgroundColor='#022340' style={'light'} />
+
+    </SafeAreaView >
   );
 }
